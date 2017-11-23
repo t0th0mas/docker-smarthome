@@ -1,0 +1,2 @@
+http://fhem.de/fhemupdate/controls_fhem.txt
+https://raw.githubusercontent.com/ChrisD70/FHEM-Modules/master/autoupdate/sb/controls_squeezebox.txt

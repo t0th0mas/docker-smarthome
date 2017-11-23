@@ -1,0 +1,14 @@
+attr global logfile -
+attr global modpath .
+attr global motd none
+attr global statefile /dev/null
+attr global sendStatistics onUpdate
+attr global updateInBackground 0
+attr global verbose 2
+attr global nofork 1
+attr global exclude_from_update %exclude_from_update%
+define telnetPort telnet 9999 global
+
+# Inspired by Stefan Erdmann / https://github.com/3rdmaennchen
+define UpdateOnStart notify global:INITIALIZED sleep 5;;update all https://raw.githubusercontent.com/RFD-FHEM/RFFHEM/dev-r33/controls_signalduino.txt;;sleep 5;;update all
+define ShutdownAfterUpdate notify global:UPDATE sleep 5;;shutdown
